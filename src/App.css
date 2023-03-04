@@ -24,6 +24,28 @@
   color: white;
 }
 
+.App-header2 {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(0, 0, 255);
+}
+
+.App-header3 {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(230, 11, 65);
+}
+
 .App-link {
   color: #61dafb;
 }
