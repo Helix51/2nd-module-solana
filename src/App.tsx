@@ -8,6 +8,15 @@ import {
 } from "@solana/web3.js";
 import {useEffect , useState } from "react";
 import './App.css'
+import{
+  mainFunctionB
+} from './index.js';
+import{
+  mainFunctionA
+} from './index3.js';
+
+
+
 
 // create types
 type DisplayEncoding = "utf8" | "hex";
@@ -52,6 +61,22 @@ interface PhantomProvider {
 };
 
 export default function App() {
+
+
+const BB = async () => {
+   
+    console.log(mainFunctionB);
+
+
+  }
+
+const GG = async () => {
+   
+    console.log(mainFunctionA);
+
+
+  }
+
   // create state variable for the provider
   const [provider, setProvider] = useState<PhantomProvider | undefined>(
     undefined
@@ -120,6 +145,51 @@ export default function App() {
           </p>
         )}
         </header>
+
+        <header className="App-header2">
+        <h2>Create a new Solana account</h2>
+      {provider && !walletKey && (
+      <button
+        style={{
+          fontSize: "16px",
+          padding: "15px",
+          fontWeight: "bold",
+          borderRadius: "5px",
+        }}
+        onClick={BB}
+      >
+        Connect new Account
+      </button>
+        )}
+        {provider && walletKey && <p>Created account</p> }
+
+
+        </header> 
+
+      <header className="App-header3">
+        <h2>Transfer to new Wallet</h2>
+      {provider && !walletKey && (
+      <button
+        style={{
+          fontSize: "16px",
+          padding: "15px",
+          fontWeight: "bold",
+          borderRadius: "5px",
+        }}
+        onClick={GG}
+      >
+        Transfer
+      </button>
+        )}
+        {provider && walletKey && <p>Transfered to new Wallet</p> }
+
+
+        </header>     
     </div>
+
+
+
   );
+
 }
+ 
